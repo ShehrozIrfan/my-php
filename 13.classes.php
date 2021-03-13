@@ -22,4 +22,13 @@ if(method_exists("Car", "moveWheels")) {
     echo "<br>" . "Move Wheels method doesn't exists...";
 }
 
+//instantiating a class.
+$honda = new Car();
+$toyota = new Car();
+
+echo "<br>";
+$honda -> moveWheels();
+echo "<br>";
+$toyota -> moveWheels();
+
 ?>
