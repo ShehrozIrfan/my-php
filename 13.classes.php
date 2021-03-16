@@ -144,7 +144,7 @@ class StaticData {
 }
 
 $sd = new StaticData();
-//the below statement will show error.
+//the below statement will show error, so when use static variables use '$'.
 //$sd -> wheels;
 
 echo StaticData :: $wheels . "<br>";
