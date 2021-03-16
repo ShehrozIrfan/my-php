@@ -62,3 +62,17 @@ echo $jet -> wheels . "<br>";
 echo $jet -> doors . "<br>";
 
 ?>
+
+
+<?php 
+//constructors
+
+class Keyboard {
+    function __construct() {
+        echo "Constructor called..." . "<br>";
+    }
+}
+
+$simple = new Keyboard();
+$mechanical = new Keyboard();
+?>
