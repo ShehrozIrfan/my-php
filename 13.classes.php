@@ -45,4 +45,20 @@ echo $honda -> wheels;
 $honda -> wheels = 5;
 echo "<br>" . $honda -> wheels;
 
+
+//class Inheritance.
+
+class Plane extends Car{
+    //over-riding.
+    var $wheels = 10;
+}
+
+if(class_exists("Plane")) {
+    echo "<br>" . "Plane exists" . "<br>";
+}
+
+$jet = new Plane();
+echo $jet -> wheels . "<br>";
+echo $jet -> doors . "<br>";
+
 ?>
