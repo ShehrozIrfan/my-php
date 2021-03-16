@@ -76,3 +76,56 @@ class Keyboard {
 $simple = new Keyboard();
 $mechanical = new Keyboard();
 ?>
+
+
+<?php 
+//Data Access.
+/*
+1. public - access anywhere
+2. protected - accessible inside a class and it's sub classes.
+3. private - accessible only inside a class.
+*/
+
+class DataAccess {
+    var $wheels;
+    public $engine;
+    private $doors;
+    protected $hood;
+    
+    function __construct() {
+        echo "Constructor called... !" . "<br>";
+        $this -> wheels = 4;
+        $this -> engine = 1;
+        $this -> doors = 5;
+        $this -> hood = 1;
+    }
+    
+    function getValues () {
+        echo "Doors : " . $this -> doors . "<br>";
+        echo "Hood : " . $this -> hood . "<br>";
+    }
+}
+
+class Child extends DataAccess {
+    function __construct() {
+        echo "Child constructor called .." . "<br>";
+        echo $this -> hood;
+    }
+}
+
+$obj = new DataAccess();
+//so we've seen that, the public and 'var' are working the same way.
+echo $obj-> wheels . "<br>";
+echo $obj -> engine . "<br>";
+
+//now access the protected and private methods outside a class.
+
+//echo $obj -> doors;
+//echo $obj -> hood;
+
+$child = new Child();
+
+//accessing the private and protected properties using getter method.
+$obj -> getValues();
+
+?>
