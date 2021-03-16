@@ -129,3 +129,24 @@ $child = new Child();
 $obj -> getValues();
 
 ?>
+
+
+<?php 
+
+//static data
+class StaticData {
+    static $wheels;
+    
+    function __construct() {
+        //accessing the static data inside a constructor.
+        StaticData :: $wheels = 4;
+    }
+}
+
+$sd = new StaticData();
+//the below statement will show error.
+//$sd -> wheels;
+
+echo StaticData :: $wheels . "<br>";
+
+?>
