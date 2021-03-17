@@ -55,3 +55,14 @@ if($handle = fopen($file, 'r')) {
 }
 
 ?>
+
+
+
+
+<?php 
+
+//deleting files.
+
+unlink("example.txt");
+
+?>
