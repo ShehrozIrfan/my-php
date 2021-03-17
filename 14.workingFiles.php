@@ -17,3 +17,20 @@ if($handle) {
 fclose($handle);
 
 ?>
+
+
+<?php 
+
+//2. writing to file.
+
+$file = "text.txt";
+
+if($handle = fopen($file, 'w')) {
+    fwrite($handle, "Currently we are working php but later on we will move to one of it's popular frameworks 'Laravel'");
+    
+    fclose($handle);
+} else {
+    echo "The application is unable to write to the file...";
+}
+
+?>
